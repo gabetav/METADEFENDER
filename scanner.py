@@ -52,7 +52,7 @@ def data_id_scan(data_id): #scanning the uploaded/new file
     #print(data2)
     display_format(data2)
 
-def display_format(data): #show specifics data 
+def display_format(data): #show specifics data and results 
     print("Filename:", file_name)
     print("Overall_status: {status}".format(status=data['scan_results']['scan_all_result_a']))
 
@@ -75,7 +75,7 @@ if response.status_code == 404: #checking for errors
     new_data = data_id_scan(analyze_file.data_id)
     
     
-else: #is hash is found run this
+else: #if hash is found run this
     print("Hash was found in the MetaDefender Cloud")
     time.sleep(1)
     #print(value)

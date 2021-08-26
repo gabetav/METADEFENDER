@@ -16,7 +16,6 @@ value = file_hash.hexdigest() #hex digested value
 print(value) #hash value
 
 #hash lookup
-#ed03d990f5b35b60b11de907a1d8433f
 url = "https://api.metadefender.com/v4/hash/{0}".format(value)
 headers = {
  "apikey": "{0}".format(api_key) #ur own api key

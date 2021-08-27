@@ -65,20 +65,20 @@ def display_format(data): #show specifics data and results
         
 if response.status_code == 404: #checking for errors
     #print("Hash not found in the MetaDefender Cloud")
-    time.sleep(1)
+    #time.sleep(1)
     analyze_file(value)
-    print("File analyzed")
-    time.sleep(1)
-    print("scanning data ID")
-    time.sleep(1)
-    print("Completed")
+    #print("File analyzed")
+    #time.sleep(1)
+    #print("scanning data ID")
+    #time.sleep(1)
+    #print("Completed")
     new_data = data_id_scan(analyze_file.data_id)
     
     
 else: #if hash is found run this
-    print("Hash was found in the MetaDefender Cloud")
+    #print("Hash was found in the MetaDefender Cloud")
     time.sleep(1)
     #print(value)
-    print(response.text)
+    #print(response.text)
     data = response.json() #whole dataset 
     display_format(data) #specific display values

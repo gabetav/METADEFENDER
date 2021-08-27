@@ -13,7 +13,7 @@ with open(file_name, "rb") as file: #reading file
         file_hash.update(chunk)
 
 value = file_hash.hexdigest() #hex digested value
-print(value) #hash value
+#print(value) #hash value
 
 #hash lookup
 url = "https://api.metadefender.com/v4/hash/{0}".format(value)
@@ -77,7 +77,7 @@ if response.status_code == 404: #checking for errors
     
 else: #if hash is found run this
     #print("Hash was found in the MetaDefender Cloud")
-    time.sleep(1)
+    #time.sleep(1)
     #print(value)
     #print(response.text)
     data = response.json() #whole dataset 
